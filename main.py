@@ -4,7 +4,7 @@ warnings.filterwarnings("ignore")
 import torch
 import numpy as np
 import pandas as pd
-from arabert.preprocess import ArabertPreprocessor
+from ArabGlossBERT.arabert.preprocess import ArabertPreprocessor
 from transformers import BertTokenizer,BertForSequenceClassification
 import warnings
 warnings.filterwarnings("ignore")
@@ -14,11 +14,11 @@ from tokenizers_words import simple_word_tokenize
 
 #print("Start")
 dftrue = pd.DataFrame()
-model = BertForSequenceClassification.from_pretrained('{}'.format('./bert-base-arabertv02_22_May_2021_00h_allglosses_unused01'),
+model = BertForSequenceClassification.from_pretrained('{}'.format('./ArabGlossBERT/bert-base-arabertv02_22_May_2021_00h_allglosses_unused01'),
                                                       output_hidden_states = True,
                                                       num_labels=2
                                                       )
-tokenizer = BertTokenizer.from_pretrained('{}'.format('./bert-base-arabertv02'))
+tokenizer = BertTokenizer.from_pretrained('{}'.format('./ArabGlossBERT/bert-base-arabertv02'))
 
 
 #print("Model loaded...")
