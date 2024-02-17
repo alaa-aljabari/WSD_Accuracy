@@ -187,4 +187,4 @@ def WSD(listOfSentence, filePath, glossesDict):
         outputList.append(sentenceJson)
     return outputList
 
-print(WSD(["كيف ساهمت السياسة", "الأميركية المستندة إلى"], 'examples.json', "dictionary.json"))
+#print(WSD(["كيف ساهمت السياسة", "الأميركية المستندة إلى"], 'examples.json', "dictionary.json"))
