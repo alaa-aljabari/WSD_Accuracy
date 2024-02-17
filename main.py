@@ -167,7 +167,7 @@ def WSDdisambiguation(inputSentence, inputWord, file_path, glossesDict):
 
 
 
-def WSD(listOfSentence, filePath, glossesDict): 
+def WSD(listOfSentence, filePath = './ArabGlossBERT/examples.json', glossesDict= "./ArabGlossBERT/dictionary.json"): 
     i = 1 
     j = 1 
     outputList = [] 
