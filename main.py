@@ -168,13 +168,13 @@ def WSDdisambiguation(inputSentence, inputWord, file_path, glossesDict):
 
 
 def WSD(listOfSentence, filePath = './ArabGlossBERT/examples.json', glossesDict= "./ArabGlossBERT/dictionary.json"): 
-    i = 1 
-    j = 1 
-    outputList = [] 
+    i = 1
+    j = 1
+    outputList = []
     for sentence in listOfSentence:
         wordsJson = []
-        words = simple_word_tokenize(sentence) 
-        for word in words: 
+        words = simple_word_tokenize(sentence)
+        for word in words:
             conceptId, gloss = WSDdisambiguation(sentence, word, filePath, glossesDict)
             wordsJson.append({
                 "word_id": j,
@@ -184,7 +184,8 @@ def WSD(listOfSentence, filePath = './ArabGlossBERT/examples.json', glossesDict=
             j = j + 1
         sentenceJson = {"sentence_id": i , "sentence": sentence, "words": wordsJson}
         i = i + 1
+        j = 1
         outputList.append(sentenceJson)
     return outputList
-
+	
 #print(WSD(["كيف ساهمت السياسة", "الأميركية المستندة إلى"], 'examples.json', "dictionary.json"))
