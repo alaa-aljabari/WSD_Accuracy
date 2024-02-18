@@ -169,9 +169,9 @@ def WSDdisambiguation(inputSentence, inputWord, file_path, glossesDict):
 
 def WSD(listOfSentence, filePath = './ArabGlossBERT/examples.json', glossesDict= "./ArabGlossBERT/dictionary.json"): 
     i = 1
-    j = 1
     outputList = []
     for sentence in listOfSentence:
+	j = 1
         wordsJson = []
         words = simple_word_tokenize(sentence)
         for word in words:
@@ -184,7 +184,6 @@ def WSD(listOfSentence, filePath = './ArabGlossBERT/examples.json', glossesDict=
             j = j + 1
         sentenceJson = {"sentence_id": i , "sentence": sentence, "words": wordsJson}
         i = i + 1
-        j = 1
         outputList.append(sentenceJson)
     return outputList
 	
