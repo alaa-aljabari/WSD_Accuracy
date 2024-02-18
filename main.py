@@ -133,24 +133,27 @@ def GlossPredictor(target, example, glosses):
   else:
     return 'none','none'
 
+
+filePath = './ArabGlossBERT/examples.json'
+glossesDict= "./ArabGlossBERT/dictionary.json"
+glossesDictContent = {}
+with open(filePath, 'r', encoding='utf-8') as file:
+   fileContent = file.read()
+
+with open(glossesDict, 'r', encoding='utf-8') as file2:
+   glossesDictValues = json.loads(file2.read())
+
+for glossesDictValue in glossesDictValues:
+   glossesDictContent[glossesDictValue["gloss_id"]] = glossesDictValue["definition"]
+
+# Load the JSON data
+sentencesInfo = json.loads(fileContent)
+
     
 targetWord = ""
 glossesIds = [] 
 
-def WSDdisambiguation(inputSentence, inputWord, file_path, glossesDict):
-   glossesDictContent = {}
-   with open(file_path, 'r', encoding='utf-8') as file:
-     fileContent = file.read()
-
-   with open(glossesDict, 'r', encoding='utf-8') as file2:
-     glossesDictValues = json.loads(file2.read())
-
-   for glossesDictValue in glossesDictValues:
-     glossesDictContent[glossesDictValue["gloss_id"]] = glossesDictValue["definition"]
-
-   # Load the JSON data
-   sentencesInfo = json.loads(fileContent)
-
+def WSDdisambiguation(inputSentence, inputWord):
    for sentenceInfo in sentencesInfo:
      glossesDictionary = {}
      sentence = sentenceInfo["sentence"]
@@ -167,15 +170,16 @@ def WSDdisambiguation(inputSentence, inputWord, file_path, glossesDict):
 
 
 
-def WSD(listOfSentence, filePath = './ArabGlossBERT/examples.json', glossesDict= "./ArabGlossBERT/dictionary.json"): 
-    i = 1
-    outputList = []
+def WSD(listOfSentence): 
+    i = 1 
+    outputList = [] 
     for sentence in listOfSentence:
-	j = 1
+        j = 1
+#        print("Sentnece : ", i , " word id : ", j)
         wordsJson = []
-        words = simple_word_tokenize(sentence)
-        for word in words:
-            conceptId, gloss = WSDdisambiguation(sentence, word, filePath, glossesDict)
+        words = simple_word_tokenize(sentence) 
+        for word in words: 
+            conceptId, gloss = WSDdisambiguation(sentence, word)
             wordsJson.append({
                 "word_id": j,
                 "word": word,
@@ -186,5 +190,5 @@ def WSD(listOfSentence, filePath = './ArabGlossBERT/examples.json', glossesDict=
         i = i + 1
         outputList.append(sentenceJson)
     return outputList
-	
-#print(WSD(["كيف ساهمت السياسة", "الأميركية المستندة إلى"], 'examples.json', "dictionary.json"))
+
+#print(WSD(["كيف ساهمت السياسة", "الأميركية المستندة إلى"]))
