@@ -178,7 +178,7 @@ def WSDdisambiguation(inputSentence, inputWord):
 
 
 
-def WSD(): 
+def calculateAccurecy(): 
     countTrue = 0
     countAll = 0 
     for sentenceInfo in sentencesInfo: 
@@ -209,4 +209,4 @@ def WSD():
     return accurecy
 
 # Main 
-print(WSD())
+print(calculateAccurecy())
