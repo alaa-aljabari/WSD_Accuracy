@@ -167,6 +167,7 @@ def WSDdisambiguation(inputSentence, inputWord):
                glossesDictionary[glossId] = glossesDictContent[glossId]
         conceptId, gloss = GlossPredictor(targetWord, sentence, glossesDictionary)
         return conceptId, gloss
+     return 0, "Enter the valid sentence"
 
 
 
