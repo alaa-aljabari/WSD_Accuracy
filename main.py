@@ -161,7 +161,7 @@ def WSDdisambiguation(inputSentence, inputWord):
         for w in sentenceInfo["words"]:
             if inputWord == w["word"]: 
                targetWord = w["word"]
-               glossesIds = w["glosses"]
+               glossesIds = w["senses"]
         for glossId in glossesIds: 
             if glossId in glossesDictContent.keys():
                glossesDictionary[glossId] = glossesDictContent[glossId]
