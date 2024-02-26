@@ -144,7 +144,7 @@ with open(glossesDict, 'r', encoding='utf-8') as file2:
    glossesDictValues = json.loads(file2.read())
 
 for glossesDictValue in glossesDictValues:
-   glossesDictContent[glossesDictValue["gloss_id"]] = glossesDictValue["definition"]
+   glossesDictContent[glossesDictValue["sense_id"]] = glossesDictValue["definition"]
 
 # Load the JSON data
 sentencesInfo = json.loads(fileContent)
