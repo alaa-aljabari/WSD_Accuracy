@@ -170,15 +170,17 @@ def WSDdisambiguation(inputSentence, inputWord):
 
 
 
-def WSD(listOfSentence): 
-    i = 1 
-    outputList = [] 
-    for sentence in listOfSentence:
+def WSD(sentence, targetWord): 
+        i = 1 
+        outputList = [] 
         j = 1
+        found = False
 #        print("Sentnece : ", i , " word id : ", j)
         wordsJson = []
         words = simple_word_tokenize(sentence) 
         for word in words: 
+          if word == targetWord:
+            found = True
             conceptId, gloss = WSDdisambiguation(sentence, word)
             wordsJson.append({
                 "word_id": j,
@@ -186,9 +188,11 @@ def WSD(listOfSentence):
                 "target_gloss": conceptId
             })
             j = j + 1
+        if found == False:
+           wordsJson = ["The target word wasn't found in the entered sentence."]  
         sentenceJson = {"sentence_id": i , "sentence": sentence, "words": wordsJson}
         i = i + 1
         outputList.append(sentenceJson)
-    return outputList
+        return outputList
 
 #print(WSD(["كيف ساهمت السياسة", "الأميركية المستندة إلى"]))
