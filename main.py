@@ -205,7 +205,7 @@ def WSD_test(sentences_json_path,output_json_path):
         
     for sentence in sentences:
         wordsJson = []
-        words = simple_word_tokenize(sentence) 
+        #words = simple_word_tokenize(sentence) 
         for word in sentence_data['words']:
             conceptId, gloss = WSDdisambiguation(sentence, word)
             wordsJson.append({
