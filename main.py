@@ -148,7 +148,7 @@ for glossesDictValue in glossesDictValues:
 
 # Load the JSON data
 sentencesInfo = json.loads(fileContent)
-
+print(sentencesInfo)
     
 targetWord = ""
 glossesIds = [] 
@@ -190,7 +190,7 @@ def WSD(sentence, targetWord):
             })
             j = j + 1
         if found == False:
-           wordsJson = ["The target word wasn't found in the entered sentence."]  
+           wordsJson = ["The target ------------ word wasn't found in the entered sentence."]  
         sentenceJson = {"sentence_id": i , "sentence": sentence, "words": wordsJson}
         i = i + 1
         outputList.append(sentenceJson)
