@@ -197,7 +197,7 @@ def WSD(sentence, targetWord):
         return outputList
 
 
-def my_WSD_test(sentences_json_path, output_json_path):
+def WSD_test(sentences_json_path, output_json_path):
     outputList = []  
     with open(sentences_json_path, 'r', encoding='utf-8') as file:
         sentences = json.load(file)
@@ -218,10 +218,10 @@ def my_WSD_test(sentences_json_path, output_json_path):
             }
             outputList.append(sentenceJson)
             
-        with open(output_json_path, 'w', encoding='utf-8') as outfile:
-            json.dump(outputList, outfile,ensure_ascii=False, indent=4)
+    with open(output_json_path, 'w', encoding='utf-8') as outfile:
+        json.dump(outputList, outfile,ensure_ascii=False, indent=4)
 
-        print("Output JSON file saved at:", output_json_path)
+    print("Output JSON file saved at:", output_json_path)
     return outputList
 
 
