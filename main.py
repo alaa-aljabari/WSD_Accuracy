@@ -197,7 +197,7 @@ def WSD(sentence, targetWord):
         return outputList
 
 
-def WSD_test(sentences_json_path,output_json_path): 
+def WSD_test(sentences_json_path, output_json_path): 
     outputList = []  
 
     with open(sentences_json_path, 'r', encoding='utf-8') as file:
@@ -211,11 +211,16 @@ def WSD_test(sentences_json_path,output_json_path):
                 "word_id": word['word_id'],
                 "word": word['word'],
                 "target_gloss": conceptId  # Assuming only one sense for simplicity
-                })
-            
-        sentenceJson = {"sentence_id": sentence['sentence_id'], "sentence": sentence['sentence'], "words": wordsJson}
+            })
+        
+        sentenceJson = {
+            "sentence_id": sentence['sentence_id'],
+            "sentence": sentence['sentence'],
+            "words": wordsJson
+        }
         outputList.append(sentenceJson)
     
+    # Moved file writing outside the loop
     with open(output_json_path, 'w', encoding='utf-8') as outfile:
         json.dump(outputList, outfile, ensure_ascii=False, indent=4)
     
