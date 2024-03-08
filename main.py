@@ -205,7 +205,7 @@ def WSD_test(sentences_json_path,output_json_path):
         
     for sentence in sentences:
         wordsJson = []
-        for word in sentence_data['words']:
+        for word in sentence['words']:
             conceptId, gloss = WSDdisambiguation(sentence, word)
             wordsJson.append({
                 "word_id": word['word_id'],
