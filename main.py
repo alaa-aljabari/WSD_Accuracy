@@ -190,10 +190,37 @@ def WSD(sentence, targetWord):
             })
             j = j + 1
         if found == False:
-           wordsJson = ["The target ------------ word wasn't found in the entered sentence."]  
+           wordsJson = ["The target word wasn't found in the entered sentence."]  
         sentenceJson = {"sentence_id": i , "sentence": sentence, "words": wordsJson}
         i = i + 1
         outputList.append(sentenceJson)
         return outputList
+
+
+def WSD(sentences_json_path,output_json_path): 
+    outputList = []  
+
+    with open(sentences_json_path, 'r', encoding='utf-8') as file:
+        sentences = json.load(file)
+        
+    for sentence in sentences:
+        wordsJson = []
+        words = simple_word_tokenize(sentence) 
+        for word in sentence_data['words']:
+		conceptId, gloss = WSDdisambiguation(sentence, word)
+		wordsJson.append({
+			"word_id": word['word_id'],
+			"word": word['word'],
+			"target_gloss": conceptId  # Assuming only one sense for simplicity
+		})
+        
+	    sentenceJson = {"sentence_id": sentence['sentence_id'], "sentence": sentence['sentence'], "words": wordsJson}
+        outputList.append(sentenceJson)
+	
+	with open(output_json_path, 'w', encoding='utf-8') as outfile:
+		json.dump(outputList, outfile, ensure_ascii=False, indent=4)
+	    
+    return outputList
+
 
 #print(WSD(["كيف ساهمت السياسة", "الأميركية المستندة إلى"]))
