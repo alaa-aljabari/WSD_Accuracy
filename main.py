@@ -219,11 +219,9 @@ def WSD_test(sentences_json_path, output_json_path):
             "words": wordsJson
         }
         outputList.append(sentenceJson)
-    
-    # Moved file writing outside the loop
-    with open(output_json_path, 'w', encoding='utf-8') as outfile:
-        outfile.write(json.dump(outputList, outfile, ensure_ascii=False, indent=4))
-        #json.dump(outputList, outfile, ensure_ascii=False, indent=4)
+        
+    with open(output_json_path, 'w') as fd:
+       fd.write(json.dumps(outputList))
     
     return outputList
 
