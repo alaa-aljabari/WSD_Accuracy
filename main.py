@@ -216,10 +216,10 @@ def WSD_test(sentences_json_path,output_json_path):
     
     sentenceJson = {"sentence_id": sentence['sentence_id'], "sentence": sentence['sentence'], "words": wordsJson}
     outputList.append(sentenceJson)
-	
-	with open(output_json_path, 'w', encoding='utf-8') as outfile:
+    
+    with open(output_json_path, 'w', encoding='utf-8') as outfile:
 		json.dump(outputList, outfile, ensure_ascii=False, indent=4)
-	    
+    
     return outputList
 
 
