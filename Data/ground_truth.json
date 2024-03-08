@@ -1,0 +1,52 @@
+[
+    {
+        "sentence_id": 1, 
+        "sentence": "كيف ساهمت السياسة الأميركية", 
+        "words": [
+            {"word_id": 1, "word": "كيف", "target_sense": 302049031}, 
+            {"word_id": 2, "word": "ساهمت", "target_sense": 302032066}, 
+            {"word_id": 3, "word": "السياسة", "target_sense": 303027139}, 
+            {"word_id": 4, "word": "الأميركية", "target_sense": 302004373}
+        ]
+    },
+    
+    {
+        "sentence_id": 2, 
+        "sentence": "\" ما لديها – وما كان", 
+        "words": [
+            {"word_id": 43, "word": "ما", "target_sense": 302050398}, 
+            {"word_id": 44, "word": "لديها", "target_sense": 302049600}, 
+            {"word_id": 46, "word": "وما", "target_sense": 302050398}, 
+            {"word_id": 47, "word": "كان", "target_sense": 302047832}
+        ]
+    },
+    
+    {
+        "sentence_id": 3, 
+        "sentence": "\" بالنسبة للولايات المتحدة", 
+        "words": [
+            {"word_id": 61, "word": "بالنسبة", "target_sense": 302058933}, 
+            {"word_id": 62, "word": "للولايات", "target_sense": 302064013}, 
+            {"word_id": 63, "word": "المتحدة", "target_sense": 302050878}
+        ]
+    },
+    
+    {
+        "sentence_id": 4, 
+        "sentence": "\" ولكن طبعاً ، من", 
+        "words": [
+            {"word_id": 88, "word": "ولكن", "target_sense": 302050027}, 
+            {"word_id": 89, "word": "طبعاً", "target_sense": 302038389}, 
+            {"word_id": 91, "word": "من", "target_sense": 302056392}
+        ]
+    },
+    
+    {
+        "sentence_id": 5, 
+        "sentence": "\" أما مؤخراً ", 
+        "words": [
+            {"word_id": 137, "word": "أما", "target_sense": 302004539}, 
+            {"word_id": 138, "word": "مؤخراً", "target_sense": 302050321}
+        ]
+    }
+]
