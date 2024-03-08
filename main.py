@@ -197,7 +197,7 @@ def WSD(sentence, targetWord):
         return outputList
 
 
-def WSD(sentences_json_path,output_json_path): 
+def WSD_test(sentences_json_path,output_json_path): 
     outputList = []  
 
     with open(sentences_json_path, 'r', encoding='utf-8') as file:
