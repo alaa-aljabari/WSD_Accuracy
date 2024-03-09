@@ -153,7 +153,7 @@ print(sentencesInfo)
 targetWord = ""
 glossesIds = [] 
 
-def my_WSDdisambiguation(inputSentence, inputWord):
+def WSDdisambiguation(inputSentence, inputWord):
    for sentenceInfo in sentencesInfo:
      glossesDictionary = {}
      sentence = sentenceInfo["sentence"]
