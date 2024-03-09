@@ -134,8 +134,8 @@ def GlossPredictor(target, example, glosses):
     return 'none','none'
 
 
-filePath = 'Data/Test.json' #'./ArabGlossBERT/examples.json'
-glossesDict= "Data/dictionary.json" #"./ArabGlossBERT/dictionary.json"
+filePath = 'WSD_Accuracy/Data/Test.json' #'./ArabGlossBERT/examples.json'
+glossesDict= "WSD_Accuracy/Data/dictionary.json" #"./ArabGlossBERT/dictionary.json"
 glossesDictContent = {}
 with open(filePath, 'r', encoding='utf-8') as file:
    fileContent = file.read()
