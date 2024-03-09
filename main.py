@@ -153,13 +153,13 @@ print(sentencesInfo)
 targetWord = ""
 glossesIds = [] 
 
-def WSDdisambiguation(inputSentence, inputWord):
+def my_WSDdisambiguation(inputSentence, inputWord):
    for sentenceInfo in sentencesInfo:
      glossesDictionary = {}
      sentence = sentenceInfo["sentence"]
      if sentence == inputSentence: 
         for w in sentenceInfo["words"]:
-            if inputWord == w["word"]: 
+            if inputWord == w["word"]:
                targetWord = w["word"]
                glossesIds = w["senses"]
         for glossId in glossesIds: 
@@ -167,7 +167,7 @@ def WSDdisambiguation(inputSentence, inputWord):
                glossesDictionary[glossId] = glossesDictContent[glossId]
         conceptId, gloss = GlossPredictor(targetWord, sentence, glossesDictionary)
         return conceptId, gloss
-     return 0, "Enter the valid sentence"
+   return 0, "Enter the valid sentence"
 
 
 
