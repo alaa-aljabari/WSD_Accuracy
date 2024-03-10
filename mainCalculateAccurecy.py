@@ -181,7 +181,7 @@ def evaluation_accuracy(ground_truth, prediction):
     total_correct = 0
     total_instances = 0
     for gt_sentence, pred_sentence in zip(ground_truth, prediction):
-        assert gt_sentence['Sentence_id'] == pred_sentence['Sentence_id'], "Sentence IDs do not match"
+        assert gt_sentence['sentence_id'] == pred_sentence['sentence_id'], "Sentence IDs do not match"
         assert gt_sentence['sentence'] == pred_sentence['sentence'], "Sentences do not match"
         for gt_word, pred_word in zip(gt_sentence['words'], pred_sentence['words']):
             assert gt_word['word'] == pred_word['word'], "Words do not match"
