@@ -177,6 +177,21 @@ def WSDdisambiguation(inputSentence, inputWord):
      return 0, "Enter the valid sentence"
 
 
+def evaluation_accuracy(ground_truth, prediction):
+    total_correct = 0
+    total_instances = 0
+    for gt_sentence, pred_sentence in zip(ground_truth, prediction):
+        assert gt_sentence['Sentence_id'] == pred_sentence['Sentence_id'], "Sentence IDs do not match"
+        assert gt_sentence['sentence'] == pred_sentence['sentence'], "Sentences do not match"
+        for gt_word, pred_word in zip(gt_sentence['words'], pred_sentence['words']):
+            assert gt_word['word'] == pred_word['word'], "Words do not match"
+            assert gt_word['word_id'] == pred_word['word_id'], "Word IDs do not match"
+            total_instances += 1
+            if gt_word['target_gloss'] == pred_word['target_gloss']:
+                total_correct += 1
+    accuracy = total_correct / total_instances if total_instances > 0 else 0
+    return accuracy
+	
 
 def calculateAccurecy(): 
     countTrue = 0
