@@ -3,50 +3,52 @@
         "sentence_id": 1, 
         "sentence": "كيف ساهمت السياسة الأميركية", 
         "words": [
-            {"word_id": 1, "word": "كيف", "target_sense": 302049031}, 
-            {"word_id": 2, "word": "ساهمت", "target_sense": 302032066}, 
-            {"word_id": 3, "word": "السياسة", "target_sense": 303027139}, 
+            {"word_id": 1, "word": "كيف", "target_sense": 302049031},
+            {"word_id": 2, "word": "ساهمت", "target_sense": 302032066},            
+            {"word_id": 3, "word": "السياسة", "target_sense": 303027139},
             {"word_id": 4, "word": "الأميركية", "target_sense": 302004373}
-        ]
-    },
-    
+            ]
+    }, 
+
     {
-        "sentence_id": 2, 
-        "sentence": "\" ما لديها – وما كان", 
+        "sentence_id": 2, "sentence": "المستندة إلى رؤية سعودية", 
         "words": [
-            {"word_id": 43, "word": "ما", "target_sense": 302050398}, 
-            {"word_id": 44, "word": "لديها", "target_sense": 302049600}, 
-            {"word_id": 46, "word": "وما", "target_sense": 302050398}, 
-            {"word_id": 47, "word": "كان", "target_sense": 302047832}
+            {"word_id": 1, "word": "المستندة", "target_sense": 302053377}, 
+            {"word_id": 2, "word": "إلى", "target_sense": 303002297}, 
+            {"word_id": 3, "word": "رؤية", "target_sense": 302028124}, 
+            {"word_id": 4, "word": "سعودية", "target_sense": 302032971}
         ]
     },
-    
+
     {
-        "sentence_id": 3, 
-        "sentence": "\" بالنسبة للولايات المتحدة", 
-        "words": [
-            {"word_id": 61, "word": "بالنسبة", "target_sense": 302058933}, 
-            {"word_id": 62, "word": "للولايات", "target_sense": 302064013}, 
-            {"word_id": 63, "word": "المتحدة", "target_sense": 302050878}
+        "sentence_id": 3, "sentence": "سوء فهم أمريكا لليمن", 
+        "words": [ 
+            {"word_id": 1, "word": "سوء", "target_sense": 302033923}, 
+            {"word_id": 2, "word": "فهم", "target_sense": 302045176}, 
+            {"word_id": 3, "word": "أمريكا", "target_sense": 2023227683}, 
+            {"word_id": 4, "word": "لليمن", "target_sense": 302064473}
         ]
     },
-    
+
     {
         "sentence_id": 4, 
-        "sentence": "\" ولكن طبعاً ، من", 
+        "sentence": "\" حرب السعودية في اليمن ", 
         "words": [
-            {"word_id": 88, "word": "ولكن", "target_sense": 302050027}, 
-            {"word_id": 89, "word": "طبعاً", "target_sense": 302038389}, 
-            {"word_id": 91, "word": "من", "target_sense": 302056392}
+            {"word_id": 1, "word": "حرب", "target_sense": 302021776}, 
+            {"word_id": 2, "word": "السعودية", "target_sense": 302032971}, 
+            {"word_id": 3, "word": "في", "target_sense": 302045253}, 
+            {"word_id": 4, "word": "اليمن", "target_sense": 302064473}
         ]
     },
-    
+
     {
         "sentence_id": 5, 
-        "sentence": "\" أما مؤخراً ", 
+        "sentence": "\" ليست قادرة على الاستمرار", 
         "words": [
-            {"word_id": 137, "word": "أما", "target_sense": 302004539}, 
-            {"word_id": 138, "word": "مؤخراً", "target_sense": 302050321}
-        ]
-    }
+            {"word_id": 1, "word": "ليست", "target_sense": 302050246}, 
+            {"word_id": 2, "word": "قادرة", "target_sense": 302045389}, 
+            {"word_id": 3, "word": "على", "target_sense": 302041708}, 
+            {"word_id": 4, "word": "الاستمرار", "target_sense": 302007573}
+            ]
+        }
 ]
