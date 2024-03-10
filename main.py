@@ -208,7 +208,7 @@ def WSD_Evaluation(sentences_json_path, output_json_path):
                 wordsJson.append({
                     "word_id": word['word_id'],
                     "word": word['word'],
-                    "target_gloss": conceptId  # Assuming only one sense for simplicity
+                    "target_sense": conceptId  # Assuming only one sense for simplicity
                 })
             
             sentenceJson = {
